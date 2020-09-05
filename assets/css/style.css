@@ -1,0 +1,297 @@
+/* Base */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  background: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  text-decoration: none;
+  /*color: black;*/
+}
+strong{font-weight: bold;}
+ol, ul {
+  list-style: none;
+}
+*, *:before, *:after {box-sizing:  border-box !important;}
+body{
+	line-height: 1.5;
+	margin: auto;
+	float: none;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: lighter;
+}
+html {
+    scroll-behavior: smooth;
+}
+* { 
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box; 
+}
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
+.bold{
+	font-weight: bold;
+}
+.italic{
+	font-style: italic;
+}
+.underline{
+	text-decoration: underline;
+}
+.text-left{
+	text-align: left;
+}
+.text-right{
+	text-align: right;
+}
+.text-center{
+	text-align: center;
+}
+img{
+	max-width: 100%;
+    max-height: 100%;
+	border-radius: 1px;
+}
+a {
+   outline: 0;
+}
+.container{
+	max-width: 1280px;
+	margin: 0 auto;
+	position: relative;
+	overflow: visible;
+	padding: 0 30px;
+}
+.btn{
+	border-radius: 5px;
+	padding: 15px !important;
+	transition: all 300ms;
+}
+.btn:hover{cursor: pointer;}
+.btn-yl{
+	color: white !important;
+	background: #fc5c65;
+	border: solid 1px #fc5c65;
+}
+.btn-yl:hover{background: #E8565D;color: white;border-color: #E8565D;}
+.btn-o{
+	color: white;
+	background: none;
+	border: solid 1px white;
+}
+.btn-o:hover{background: white;color: black;}
+.row{width: 100%;display: flex;flex-wrap: wrap;}
+.col-25{width: calc(25% - 30px);margin: 0 15px;}
+.col-100{width: 100%;}
+
+/* Navbar */
+nav{
+	width: 100%;
+	display: block;
+	background: white;
+	color: white;
+	line-height: 1;
+	float: left;
+	position: absolute;
+	top: 0;
+	z-index: 100;
+}
+nav ul, nav img{float: left;}
+nav img{margin-top: 7.5px;margin-right: 15px;}
+nav ul li{float: left;}
+nav ul a, nav .right a{
+	padding: 25px 15px;
+	float: left;
+	color: black;
+	transition: all 300ms;
+}
+nav a.btn{margin-top: 10px;margin-left: 15px;}
+nav a:hover, nav a.active{
+	color: #20bf6b;
+}
+.nav-dropdown {
+	position: absolute;
+	display: none;
+	z-index: 1;
+	box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+.nav-mobile {
+	display: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 70px;
+	width: 70px;
+}
+#nav-toggle {
+	position: absolute;
+	top: 20px;
+	right: 0;
+	cursor: pointer;
+	padding: 10px 35px 16px 0px;
+	z-index: 100;
+}
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+	cursor: pointer;
+	border-radius: 1px;
+	height: 5px;
+	width: 35px;
+	background: #4a4a4a;
+	position: absolute;
+	display: block;
+	content: '';
+	transition: all 300ms ease-in-out;
+}
+#nav-toggle span:before {
+	top: -10px;
+}
+#nav-toggle span:after {
+	bottom: -10px;
+}
+#nav-toggle.active span {
+	background-color: transparent;
+}
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+	top: 0;
+}
+#nav-toggle.active span:before {
+	transform: rotate(45deg);
+}
+#nav-toggle.active span:after {
+	transform: rotate(-45deg);
+}
+
+/* Header */
+header{
+	background: #20bf6b;
+	color: white;
+	text-align: center;
+	padding: 150px 0;
+	margin-top: 60px;
+}
+header .btn-ctr{margin-top: 30px;}
+header .btn-ctr a:first-child{margin-right: 5px;}
+
+/* How It Works & Find Something Now */
+#how, #find{
+	padding: 50px 0;
+	text-align: center;
+}
+#find{background: #f5f6fa;}
+#how img{max-width: 192px;}
+#how .row, #find .row{margin-top: 30px;}
+#find .col-25{position: relative;line-height: 0;}
+#find .col-25 .ovrly{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	background: rgba(0,0,0,.5);
+	transition: all 500ms;
+}
+#find .col-25 .ovrly:hover{background: rgba(0,0,0,.75);color: red;}
+#find .col-25 p{
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	color: white;
+}
+
+/* Offer */
+#offer{padding: 50px 0;}
+#offer .row{margin-top: 30px;}
+#offer .col-25 div{margin-bottom: 7.5px;}
+#offer .col-25 div h2{padding-bottom: 7.5px;}
+#offer .col-25 div h3{font-weight: lighter;}
+#offer .col-25 div h3 a{color: #20bf6b;transition: all 300ms;}
+#offer .col-25 div h3 a:hover{color: #1CA65C;}
+
+/* Footer */
+footer{
+	background: #20bf6b;
+	float: left;
+	padding: 20px 0 15px;
+	width: 100%;
+	color: white;
+	line-height: 1;
+}
+footer .left{line-height: 42px;}
+footer span.fa-stack i.fa-circle{color: white;transition: all 300ms;}
+footer span.fa-stack i:last-child{color: #20bf6b;transition: all 300ms;}
+footer span.fa-stack:hover i:last-child{color: white;}
+footer span.facebook:hover i.fa-circle{color: #537BBD;}
+footer span.instagram:hover i.fa-circle{color: #696A6A;}
+footer  span.pinterest:hover i.fa-circle{color: #CC2028;}
+footer span.twitter:hover i.fa-circle{color: #78CDF0;}
+
+/* Responsive Stuff */
+@media screen and (max-width: 992px) {
+	.col-25{width: calc(50% - 30px);margin: 15px;}
+}
+@media screen and (max-width: 768px) {
+	.container{padding: 0 15px;}
+	nav{
+		padding: 0 30px;
+	}
+	nav img{margin-bottom: 7.5px;}
+	nav .container{padding: 0;}
+	nav li{
+		float: none;
+		display: block;
+		padding: 5px 0;
+		width: 100%;
+	}
+	nav a{
+		display: block;
+		padding-left: 0;
+	}
+	nav .right{display: none;}
+	.nav-mobile {
+		display: block;
+	}
+	nav ul {
+		display: none;
+		float: none;
+		top: 0;
+		margin: 0;
+		width: 100%;
+	}
+	.nav-dropdown {
+		position: static;
+	}
+	nav ul > li:first-child{margin-top: 5px;}
+	nav ul li a{
+		padding: 5px 0;
+		border: 0;
+		width: 100%;
+	}
+	nav a.btn{margin-left: 0;margin-bottom: 15px;}
+	.col-25{width: 100%;margin: 15px 0;}
+	footer .left, footer .right{width: 100%;text-align: center;}
+}
+@media screen and (min-width: 768px) {
+	nav ul {
+		display: inline-block !important;
+	}
+	nav ul .mobile{
+		display: none;
+	}
+	nav .right{display: block;}
+}
